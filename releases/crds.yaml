@@ -1,0 +1,15 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: crds
+  namespace: kube-system
+  annotations:
+    flux.weave.works/automated: "true"
+spec:
+  releaseName: crds
+  chart:
+    repository: https://fimbulvetr.chainalysis.com/artifactory/helm 
+    name: crds
+    version: 0.1.1
+  values:
