@@ -9,7 +9,6 @@ metadata:
 spec:
   releaseName: crds
   chart:
-    repository: https://fimbulvetr.chainalysis.com/artifactory/helm 
+    repository: https://fimbulvetr.chainalysis.com/artifactory/helm
     name: crds
     version: 0.1.1
-  values:
