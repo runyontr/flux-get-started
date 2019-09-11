@@ -12,3 +12,6 @@ spec:
     repository: https://fimbulvetr.chainalysis.com/artifactory/helm
     name: crds
     version: 0.1.1
+  values:
+    strimzi-kafka-operator:
+      watchNamespaces: ["default", "reactor"]
