@@ -15,3 +15,5 @@ spec:
     transfer-ingest:
       imagePullSecrets:
         - name: "artifactory"
+      image:
+        tag: 1.130.5.84.g7de6c72
