@@ -1,0 +1,17 @@
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: reactor-ingest-dev
+  namespace: reactor-dev
+  annotations:
+    flux.weave.works/automated: "true"
+spec:
+  releaseName: reactor-ingest-dev
+  chart:
+    repository: https://fimbulvetr.chainalysis.com/artifactory/helm
+    name: ingest
+    version: 0.1.0
+  values:
+    transfer-ingest:
+      imagePullSecrets:
+        - name: "artifactory"
