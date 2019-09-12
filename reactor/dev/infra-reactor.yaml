@@ -1,12 +1,12 @@
 apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
-  name: reactor-infra
+  name: reactor-infra-dev
   namespace: reactor-dev
   annotations:
     flux.weave.works/automated: "true"
 spec:
-  releaseName: reactor-infra
+  releaseName: reactor-infra-dev
   chart:
     repository: https://fimbulvetr.chainalysis.com/artifactory/helm
     name: infra
