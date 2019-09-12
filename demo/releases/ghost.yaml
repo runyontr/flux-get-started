@@ -12,7 +12,7 @@ spec:
   chart:
     git: ssh://git@github.com/runyontr/flux-get-started
     ref: master
-    path: charts/ghost
+    path: demo/charts/ghost
   values:
     image: bitnami/ghost:1.21.5-r0
     persistence:

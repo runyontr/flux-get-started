@@ -1,0 +1,26 @@
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: reactor-infra
+  namespace: reactor-dev
+  annotations:
+    flux.weave.works/automated: "true"
+spec:
+  releaseName: reactor-infra
+  chart:
+    repository: https://fimbulvetr.chainalysis.com/artifactory/helm
+    name: infra
+    version: 0.1.0
+  values:
+    postgresql:
+      persistence:
+        size: 5Gi
+      metrics:
+        enabled: true
+    resources:
+      requests:
+        memory: 4Gi
+        cpu: "2"
+      limits:
+        memory: 8Gi
+        cpu: "4"
