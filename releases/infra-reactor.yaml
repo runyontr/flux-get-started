@@ -10,7 +10,7 @@ spec:
   chart:
     repository: https://fimbulvetr.chainalysis.com/artifactory/helm
     name: infra
-    version: 0.1.1
+    version: 0.1.0
   values:
     postgresql:
       persistence:
